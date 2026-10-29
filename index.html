@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="logo.png">
+<title>El Matambre · Fiambrería en Caseros</title>
+<meta name="description" content="Fiambrería El Matambre en Caseros. Pedí online por WhatsApp, retirás en el local.">
+<style>
+:root{--bg:#fff;--ink:#1a1a1a;--red:#9c2a1f;--red2:#7a1f17;--gr:#5fcf2a;--pz:#26302b;--card:#fff;--mut:#6b6b73;--ln:#e8e8ec;--yl:#ffe45c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 Georgia,serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+.sans,button,input,select,textarea,.badge,.price{font-family:system-ui,sans-serif}
+header{position:sticky;top:0;z-index:20;background:var(--red);color:#fff;display:flex;align-items:center;gap:12px;padding:8px 16px}
+header img.logo{height:60px;width:60px;border-radius:50%;object-fit:cover;background:#fff}header b{font-size:18px}header small{display:block;opacity:.8;font-size:12px}
+header nav{margin-left:auto;display:flex;gap:14px;align-items:center}header a{color:#fff;text-decoration:none}
+.btn{background:#fff;color:var(--red);border:0;border-radius:99px;padding:8px 16px;font-weight:700}
+.btn.p{background:var(--red);color:#fff}.btn.o{background:none;border:1px solid var(--ln);color:var(--ink)}
+.hero{position:relative;min-height:300px;display:grid;place-items:center;text-align:center;color:#fff;padding:32px 16px;background:#3a2118 url(portada.jpg) center/cover}
+.hero:before{content:"";position:absolute;inset:0;background:rgba(30,12,8,.6)}.hero>div{position:relative;max-width:560px}
+.hero h1{font-size:clamp(34px,8vw,56px);margin:6px 0}.hero .btn{margin:4px}
+main{max-width:1100px;margin:auto;padding:0 16px 40px}
+.pizarra{background:var(--pz);color:#f1f1e6;border-radius:16px;padding:20px;margin:24px 0}
+.pizarra h2{margin:0 0 4px}.pizarra p{margin:0;opacity:.8}
+.search{display:flex;background:var(--card);border:1px solid var(--ln);border-radius:99px;padding:4px;margin:16px 0}
+.search input{flex:1;border:0;background:none;padding:8px 14px;color:var(--ink);outline:0;min-width:0}
+.search button{background:#e8174b;color:#fff;border:0;border-radius:50%;width:38px;height:38px}
+.sec{margin:28px 0}.sec h3{margin:0 0 10px;font-size:22px}
+.green{background:linear-gradient(160deg,#b8f08c,var(--gr));border-radius:20px;padding:16px;color:#0b3a0b}
+.row{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}
+.card{flex:0 0 170px;background:var(--card);color:var(--ink);border-radius:16px;overflow:hidden;scroll-snap-align:start;display:flex;flex-direction:column;border:1px solid var(--ln)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}.grid .card{flex:none}
+.im{position:relative;aspect-ratio:1;background:#fff center/contain no-repeat content-box;padding:8px;display:grid;place-items:center;font-size:56px}.card{cursor:pointer}.im.big{height:300px;font-size:96px;border-radius:20px;margin:12px 0}.badge.st{position:static;display:inline-block;margin:4px 4px 0 0}.vi{background:#4b1fa8;color:#fff}
+.bar{position:sticky;bottom:0;background:var(--bg);display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid var(--ln);font-family:system-ui,sans-serif}.f textarea{font:inherit}
+.badge{position:absolute;top:8px;left:8px;background:var(--yl);color:#222;font-weight:800;font-size:12px;padding:3px 8px;border-radius:6px}
+.add{position:absolute;right:8px;bottom:8px;width:36px;height:36px;border-radius:50%;border:0;background:#fff;font-size:22px;box-shadow:0 1px 4px #0003;color:#222}
+.bd{padding:10px;font-family:system-ui,sans-serif;font-size:14px}.bd .n{min-height:38px}
+.price{font-weight:800;font-size:17px}.old{text-decoration:line-through;color:var(--mut);font-size:13px;margin-left:6px;font-weight:400}.u{color:var(--mut);font-size:12px}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.cat{text-align:center;font-family:system-ui,sans-serif;font-size:14px;color:var(--ink)}.ci{display:block;width:100%;height:clamp(84px,24vw,104px);object-fit:contain;background:#f4f4f6;border-radius:16px;margin-bottom:6px}.pr{background:linear-gradient(135deg,#7be04a,#3fb21f);color:#fff;font:800 26px system-ui;display:grid;place-items:center}
+.cat{text-decoration:none}[id^="c-"]{scroll-margin-top:72px}html{scroll-behavior:smooth}
+@media(max-width:640px){.cats{grid-template-columns:repeat(3,1fr);gap:10px}.cat{font-size:13px}}
+.top{display:flex;justify-content:space-between;align-items:baseline}.top a{font:600 14px system-ui;color:var(--ink);cursor:pointer}
+footer{background:var(--red2);color:#fff;padding:28px 16px}footer .in{max-width:1100px;margin:auto}
+footer iframe{width:100%;height:260px;border:0;border-radius:12px;margin-top:12px}footer a{color:#fff}
+.ov{position:fixed;inset:0;background:#0008;z-index:50;display:none;align-items:flex-end;justify-content:flex-end}.ov.on{display:flex}
+.pn{background:var(--bg);width:min(440px,100%);height:100%;overflow:auto;padding:16px}.md{margin:auto;height:auto;max-height:92vh;border-radius:20px;width:calc(100% - 40px);max-width:360px;padding:22px;text-align:center}.md .btn{display:block;width:100%;margin-top:8px;text-decoration:none;text-align:center}.num{font:800 44px system-ui;margin:6px 0}.b2{top:34px;background:#4b1fa8;color:#fff}
+.cartb{position:relative;width:52px;height:52px;border-radius:50%;border:0;background:#fff;display:grid;place-items:center}.cartb em{position:absolute;top:-6px;right:-6px;min-width:24px;height:24px;border-radius:50%;background:#e01e1e;color:#fff;border:2px solid #fff;font:700 13px/20px system-ui;text-align:center;display:none}
+body{overflow-x:hidden}@media(max-width:640px){header{padding:8px 12px;gap:8px}header nav a,header small{display:none}header b{font-size:16px}header img.logo{height:48px;width:48px}}
+.ln{display:flex;gap:8px;align-items:center;border-bottom:1px solid var(--ln);padding:8px 0;font:14px system-ui}.ln span:first-child{flex:1}
+.q{display:flex;align-items:center;gap:6px}.q button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ln);background:var(--card);color:var(--ink)}
+.f{display:grid;gap:8px;margin:12px 0}.f input,.f select,.f textarea{padding:9px;border:1px solid var(--ln);border-radius:8px;background:var(--card);color:var(--ink)}
+.warn{background:#fff3cd;color:#5c4400;border-radius:10px;padding:12px;font:14px system-ui}
+.tb{width:100%;border-collapse:collapse;font:13px system-ui}.tb td{border-bottom:1px solid var(--ln);padding:4px}
+</style></head><body>
+<header><img src="logo.png" alt="El Matambre" class="logo"><div><b>El Matambre</b><small>Fiambrería · Caseros</small></div>
+<nav class="sans"><a href="#productos">Productos</a><a href="#ubicacion">Dónde estamos</a><button class="cartb" id="cb" aria-label="Ver mi pedido"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 11.4a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 7H6"/></svg><em id="cc">0</em></button></nav></header>
+<section class="hero"><div><small>¡Bienvenidos, vecinos!</small><h1>Que te mata el hambre</h1><p>Fiambres, quesos y picadas con alma de tasca española, en el corazón de Caseros. Armá tu pedido y te lo preparamos al toque.</p><a class="btn" href="#productos">Armar mi pedido</a> <a class="btn" href="#ubicacion">Cómo llegar</a></div></section>
+<main id="productos">
+<div class="pizarra"><h2>Nuestra pizarra</h2><p>Del mostrador a tu mesa. Precios orientativos: el total final se confirma por WhatsApp según el peso.</p></div>
+<div class="search"><input id="q" placeholder="Buscar producto…" aria-label="Buscar"><button aria-label="Buscar">🔍</button></div>
+<div id="app"></div></main>
+<footer id="ubicacion"><div class="in"><h3>Dónde estamos</h3><p>📍 Calle 3 de Febrero 2878, Caseros, Provincia de Buenos Aires.</p>
+<a href="https://www.google.com/maps/search/?api=1&query=3%20de%20Febrero%202878%2C%20Caseros%2C%20Buenos%20Aires%2C%20Argentina" target="_blank">Abrir en Google Maps</a> · <a href="https://www.instagram.com/fiambreriaelmatambre" target="_blank">@fiambreriaelmatambre</a>
+<iframe title="Mapa" loading="lazy" src="https://maps.google.com/maps?q=3%20de%20Febrero%202878%2C%20Caseros%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
+<p>© 2026 El Matambre · Que te mata el hambre</p></div></footer>
+
+<div class="ov" id="co"><div class="pn"><div class="top"><h3>🛒 Tu pedido</h3><button class="btn o" data-x>Cerrar</button></div><div id="cl"></div><h3 id="ct"></h3><div class="f"><input id="cn" placeholder="Nombre y apellido de quien retira" autocomplete="name"><small id="cm" style="color:#c0291b"></small></div><button class="btn p" id="send" style="width:100%;padding:12px">Enviar pedido por WhatsApp</button></div></div>
+<div class="ov" id="wm"><div class="pn md"><div class="warn" style="text-align:left"><b>⚠️ Atención: no hacemos entregas a domicilio.</b><br>Los pedidos se retiran en el local (Calle 3 de Febrero 2878, Caseros, Provincia de Buenos Aires). ¿Querés continuar con tu pedido?</div><button class="btn p" id="ok">Sí, continuar</button><button class="btn o" data-x>Volver</button></div></div>
+<div class="ov" id="ty"><div class="pn md" id="tp"></div></div>
+<div class="ov" id="dv"><div class="pn" id="dvp"></div></div>
+<div class="ov" id="ad"><div class="pn" id="ap"></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+/* ===== CONFIGURACIÓN: pegá acá tus datos de Supabase (Project Settings > API) ===== */
+const SUPABASE_URL="https://mzohtprspdesqixbpvtc.supabase.co", SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16b2h0cHJzcGRlc3FpeGJwdnRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4OTI0MzQsImV4cCI6MjEwODQ2ODQzNH0.x2V74D53IrDAVjdVj3JrUEcCNui5gXNRaa7d8XGujFw";      // vacío = modo demo (datos de ejemplo)
+const IVA=1.21; // 21%: precio sin impuestos = precio / 1,21
+const ADMIN_EMAIL="tuvidrieradigital1@gmail.com", WA="5491168521226";
+/* ================================================================================== */
+const CATS=[["Snacks","🥨"],["Bebidas con alcohol","🍷"],["Bebidas sin alcohol","🥤"],["Quesos","🧀"],["Fiambres y Embutidos","🥓"],["Lácteos y Huevos","🥚"],["Golosinas y Chocolates","🍫"],["Galletitas y Panadería","🍪"],["Delicatessen","🫒"],["Almacén","🥫"]];
+const UN={"100g":["por 100 g",100,"g"],kg:["por kg",0.5,"kg"],un:["por unidad",1,"un"]};
+const $=s=>document.querySelector(s),money=n=>"$"+Math.round(n).toLocaleString("es-AR");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const sb=SUPABASE_URL?supabase.createClient(SUPABASE_URL,SUPABASE_KEY):null;
+let P=[],cart=JSON.parse(localStorage.getItem("cart")||"{}"),user=null,term="";
+const demo=()=>{let id=0;const d=[];CATS.forEach(([c,e],i)=>["A","B","C"].forEach((l,j)=>d.push({id:++id,name:`${c.split(" ")[0]} ejemplo ${l}`,category:c,price:1500+i*400+j*700,old_price:j==0?3000+i*500:null,unit:["Fiambres y Embutidos","Quesos"].includes(c)?"100g":"un",discount_pct:j==0?[72,100,50,30][i%4]:0,promo:j==1?"2da50":null,is_offer:j==0&&i<5,is_promo:j==1,image_url:null,emoji:e,sold_count:(30-id)*3,active:true})));return d};
+async function load(){if(sb){const{data,error}=await sb.from("products").select("*").eq("active",true).order("name");P=error?[]:data}else P=JSON.parse(localStorage.getItem("demoP")||"null")||demo();render()}
+const badge=p=>p.promo?"2DA al "+p.promo.slice(3)+"% OFF":p.discount_pct>0?p.discount_pct+"% OFF":"";
+const card=p=>{const b=badge(p),im=p.image_url?`style="background-image:url('${esc(p.image_url)}')"`:"";return`<div class="card" data-id="${p.id}"><div class="im" ${im}>${p.image_url?"":esc(p.emoji||"🛒")}${b?`<span class="badge">${b}</span>`:""}${p.promo?`<span class="badge b2">LLEVANDO 2</span>`:""}<button class="add" data-a="${p.id}" aria-label="Agregar ${esc(p.name)}">+</button></div><div class="bd"><div class="n">${esc(p.name)}</div><div class="price">${money(p.price)}${p.old_price?`<span class="old">${money(p.old_price)}</span>`:""}</div><div class="u">${UN[p.unit][0]}</div></div></div>`};
+const rowS=(t,l,cls="",em="Próximamente: todavía no hay productos en esta sección.")=>`<section class="sec ${cls}"><div class="top"><h3>${t}</h3></div>${l.length?`<div class="row">${l.map(card).join("")}</div>`:`<p class="u">${em}</p>`}</section>`;
+function render(){const a=$("#app");if(term){const r=P.filter(p=>(p.name+" "+p.category).toLowerCase().includes(term));a.innerHTML=`<h3>Resultados (${r.length})</h3><div class="grid">${r.map(card).join("")||"<p>No encontramos ese producto. Probá con otra palabra.</p>"}</div>`;return}
+const top=[...P].sort((x,y)=>y.sold_count-x.sold_count).filter(p=>p.sold_count>0).slice(0,10);
+a.innerHTML=rowS("Ofertas del día",P.filter(p=>p.is_offer),"green","Pronto vas a ver acá las ofertas del día.")+
+`<section class="sec"><h3>Categorías destacadas</h3><div class="cats"><a class="cat" href="#c-promo"><div class="ci pr">2×1 %</div>Promociones</a>${CATS.map(([c],i)=>`<a class="cat" href="#c-${i}"><img class="ci" src="${i}.jpg" alt="" loading="lazy">${c}</a>`).join("")}</div></section>`+
+`<div id="c-promo">${rowS("Promociones",P.filter(p=>p.is_promo),"green","Pronto vas a ver acá las promociones.")}</div>`+rowS("Los más vendidos",top,"","Todavía no hay datos: esta sección se completa sola a medida que los clientes envían pedidos.")+
+CATS.map(([c],i)=>`<div id="c-${i}">${rowS(c,P.filter(p=>p.category==c))}</div>`).join("")}
+/* detalle de producto */
+const base=p=>p.old_price>p.price?p.old_price:p.price,net=p=>"$"+(base(p)/IVA).toLocaleString("es-AR",{minimumFractionDigits:2,maximumFractionDigits:2});
+let dp=null,dq=0;
+function openP(id){dp=P.find(x=>x.id==id);if(!dp)return;dq=step(dp);drawP();$("#dv").classList.add("on")}
+function drawP(){const p=dp,b=badge(p);$("#dvp").innerHTML=`<button class="btn o" data-x>← Volver</button><div class="im big" ${p.image_url?`style="background-image:url('${esc(p.image_url)}')"`:""}>${p.image_url?"":esc(p.emoji||"🛒")}</div><h2 style="margin:8px 0">${esc(p.name)}</h2>${b?`<span class="badge st" style="background:#e3001b;color:#fff">OFERTA</span>`:""}${b?`<span class="badge st">${b}</span>`:""}${p.promo?`<span class="badge st vi">LLEVANDO 2</span>`:""}<div class="price" style="font-size:26px;margin-top:6px">${money(p.price)}${p.old_price?`<span class="old">${money(p.old_price)}</span>`:""}</div><div class="u">${UN[p.unit][0]}</div><div class="u">Precio sin impuestos nacionales ${net(p)}${p.unit=="un"?"":" "+UN[p.unit][0]}</div>${p.liters>0?`<div class="u">Precio por 1 litro: $${(base(p)/p.liters).toLocaleString("es-AR",{minimumFractionDigits:2,maximumFractionDigits:2})}</div>`:""}${p.grams>0?`<div class="u">Precio por 1 kilo: $${(base(p)/(p.grams/1000)).toLocaleString("es-AR",{minimumFractionDigits:2,maximumFractionDigits:2})}</div>`:""}${p.description?`<h3>Descripción</h3><p class="sans" style="color:var(--mut);white-space:pre-line">${esc(p.description)}</p>`:""}<div class="bar"><div><small>Tu producto</small><br><b class="price" style="font-size:20px">${money(line(p,dq))}</b></div><span class="q"><button data-dm>−</button>${fq(p,dq)}<button data-dpl>+</button></span><button class="btn p" data-dadd>Agregar</button></div>`}
+/* carrito */
+const sv=()=>{localStorage.setItem("cart",JSON.stringify(cart));const n=Object.keys(cart).length;$("#cc").textContent=n;$("#cc").style.display=n?"block":"none"};
+const step=p=>UN[p.unit][1],fq=(p,q)=>UN[p.unit][2]=="un"?q+" un":UN[p.unit][2]=="g"?q+" g":q+" kg";
+const dos=p=>/^2da/.test(p.promo)&&p.unit=="un",pc=p=>+p.promo.slice(3);
+const line=(p,q)=>p.unit=="100g"?p.price*q/100:p.price*q-(dos(p)?Math.floor(q/2)*p.price*pc(p)/100:0);
+function drawCart(){const l=Object.entries(cart).map(([id,q])=>[P.find(x=>x.id==id),q]).filter(x=>x[0]);let t=0;
+$("#cl").innerHTML=l.map(([p,q])=>{t+=line(p,q);return`<div class="ln"><span>${esc(p.name)}${dos(p)&&q>=2?"<br><small>✓ 2da al "+pc(p)+"% aplicada</small>":""}</span><span class="q"><button data-m="${p.id}">−</button>${fq(p,q)}<button data-p="${p.id}">+</button></span><b>${money(line(p,q))}</b></div>`}).join("")||"<p>Todavía no agregaste nada.</p>";
+$("#ct").textContent="Total aprox.: "+money(t);sv();return l}
+document.addEventListener("click",e=>{const t=e.target,d=t.dataset;const cd=t.closest(".card");if(cd&&cd.dataset.id&&!t.closest(".add"))openP(cd.dataset.id);
+if("dm" in d){dq=Math.max(step(dp),+(dq-step(dp)).toFixed(2));drawP()}if("dpl" in d){dq=+(dq+step(dp)).toFixed(2);drawP()}if("dadd" in d){cart[dp.id]=+((cart[dp.id]||0)+dq).toFixed(2);sv();$("#dv").classList.remove("on")}
+if(d.a){const p=P.find(x=>x.id==d.a);cart[d.a]=(cart[d.a]||0)+step(p);sv()}
+if(d.p){cart[d.p]+=step(P.find(x=>x.id==d.p));drawCart()}
+if(d.m){const s=step(P.find(x=>x.id==d.m));cart[d.m]=+(cart[d.m]-s).toFixed(2);if(cart[d.m]<=0)delete cart[d.m];drawCart()}
+if(t.closest("#cb")){drawCart();$("#co").classList.add("on")}
+if(t.id=="send"&&Object.keys(cart).length){if(!/\S+\s+\S+/.test($("#cn").value.trim())){$("#cm").textContent="Escribí nombre y apellido de quien retira.";$("#cn").focus()}else{$("#cm").textContent="";$("#wm").classList.add("on")}}
+if("x" in d){t.closest(".ov").classList.remove("on");if(t.closest("#ad"))history.replaceState(null,"",location.pathname+location.search)}
+if(t.id=="ok")finish();
+if(t.classList.contains("ov"))t.classList.remove("on")});
+$("#q").oninput=e=>{term=e.target.value.trim().toLowerCase();render()};
+async function finish(){const l=drawCart(),name=$("#cn").value.trim().replace(/\s+/g," "),w=window.open("","_blank");let t=0;l.forEach(([p,q])=>t+=line(p,q));
+const min=l.some(([p])=>["Fiambres y Embutidos","Quesos"].includes(p.category))?45:30,hr=new Date(Date.now()+min*6e4).toLocaleTimeString("es-AR",{hour:"2-digit",minute:"2-digit",hour12:false});
+const items=l.map(([p,q])=>({id:p.id,qty:p.unit=="un"?q:1}));let n;
+if(sb){const{data,error}=await sb.rpc("create_order",{p_items:items,p_customer:name,p_pickup:hr,p_total:Math.round(t)});if(error){w&&w.close();alert("No pudimos registrar el pedido. Probá de nuevo en unos segundos.");return}n=data}
+else{n=(+localStorage.getItem("demoN")||0)+1;localStorage.setItem("demoN",n);items.forEach(i=>P.find(p=>p.id==i.id).sold_count+=i.qty);localStorage.setItem("demoP",JSON.stringify(P))}
+const num=String(n).padStart(3,"0"),txt=`*Pedido N° ${num}* (retiro en local)\n*Retira:* ${name}\n*Listo a partir de las:* ${hr} hs\n`+l.map(([p,q])=>`• ${fq(p,q)} ${p.name} ${money(line(p,q))}${dos(p)&&q>=2?` (2da al ${pc(p)}%)`:""}`).join("\n")+`\n*Total aprox.: ${money(t)}*`,url="https://wa.me/"+WA+"?text="+encodeURIComponent(txt);
+cart={};sv();document.querySelectorAll(".ov").forEach(o=>o.classList.remove("on"));render();
+$("#tp").innerHTML=`<h3>¡Gracias por su compra!</h3><p>No olvide su número de pedido al momento de retirar.</p><div class="num">N° ${num}</div><p><b>${esc(name)}</b></p><p>Su pedido estará listo a partir de las <b>${hr} hs</b>.</p><div class="warn">Recordá tocar <b>Enviar</b> en WhatsApp para que recibamos tu pedido.</div><a class="btn p" href="${url}" target="_blank" rel="noopener">Abrir WhatsApp</a><button class="btn o" data-x>Cerrar</button>`;$("#ty").classList.add("on");
+if(w)w.location=url}
+/* admin */
+async function adminOpen(){if(!sb){user={email:ADMIN_EMAIL};return panel()}
+const{data}=await sb.auth.getSession();user=data.session?.user||null;panel()}
+let editId=null;
+function fill(id){const p=P.find(x=>x.id==id);editId=id;const s=(i,v)=>$("#"+i).value=v??"";s("pn",p.name);s("pc",p.category);s("pp",p.price);s("po",p.old_price);s("pu",p.unit);s("pd",p.discount_pct||"");s("pr",p.promo||"");s("pl",p.liters);s("pg",p.grams);s("pds",p.description);$("#pof").checked=p.is_offer;$("#ppr").checked=p.is_promo;$("#ps").textContent="Guardar cambios";$("#pm").textContent="Editando: "+p.name+". Si no elegís foto nueva, se conserva la actual.";$("#pn").scrollIntoView({behavior:"smooth"})}
+function panel(){editId=null;const o=$("#ad"),a=$("#ap");o.classList.add("on");
+if(!user||user.email!=ADMIN_EMAIL){a.innerHTML=`<div class="top"><h3>Acceso administrador</h3><button class="btn o" data-x>Cerrar</button></div><div class="f"><input id="le" type="email" placeholder="Correo"><input id="lp" type="password" placeholder="Contraseña"><button class="btn p" id="li">Ingresar</button><small id="lm"></small></div>`;
+$("#li").onclick=async()=>{const{data,error}=await sb.auth.signInWithPassword({email:$("#le").value,password:$("#lp").value});if(error||data.user.email!=ADMIN_EMAIL){$("#lm").textContent="Correo o contraseña incorrectos.";return}user=data.user;panel()};return}
+a.innerHTML=`<div class="top"><h3>Panel admin</h3><span><button class="btn o" id="lo">Salir</button> <button class="btn o" data-x>Cerrar</button></span></div>
+<div class="f"><input id="pn" placeholder="Nombre"><select id="pc">${CATS.map(c=>`<option>${c[0]}</option>`)}</select>
+<input id="pp" type="number" placeholder="Precio"><input id="po" type="number" placeholder="Precio anterior (tachado, opcional)">
+<select id="pu"><option value="100g">por 100 g</option><option value="kg">por kg</option><option value="un">por unidad</option></select><input id="pl" type="number" step="0.01" placeholder="Litros del envase (solo líquidos, ej: 2.25)"><input id="pg" type="number" step="1" placeholder="Peso del envase en gramos (para precio por kilo, ej: 250)">
+<input id="pd" type="number" placeholder="% descuento (ej 72 ó 100; 0 = ninguno)"><select id="pr"><option value="">Sin promo 2DA</option><option value="2da50">2DA al 50% OFF (solo "por unidad")</option><option value="2da70">2DA al 70% OFF (solo "por unidad")</option></select>
+<label><input type="checkbox" id="pof"> Ofertas del día</label><label><input type="checkbox" id="ppr"> Sección Promociones</label>
+<textarea id="pds" rows="2" placeholder="Descripción del producto (opcional)"></textarea><input id="pf" type="file" accept="image/*"><button class="btn p" id="ps">Agregar producto</button><small id="pm"></small></div>
+<table class="tb">${P.map(p=>`<tr><td>${esc(p.name)}</td><td><input type="number" value="${p.price}" data-pr="${p.id}" style="width:80px"></td><td><button class="btn o" data-ed="${p.id}">Editar</button> <button class="btn o" data-del="${p.id}">Quitar</button></td></tr>`).join("")}</table>`;
+$("#lo").onclick=async()=>{await sb?.auth.signOut();user=null;panel()};
+$("#ps").onclick=save;
+a.onchange=async e=>{if(e.target.dataset.pr)await upd(e.target.dataset.pr,{price:+e.target.value})};
+a.onclick=async e=>{if(e.target.dataset.ed){fill(e.target.dataset.ed);return}if(e.target.dataset.del&&confirm("¿Quitar producto?"))await upd(e.target.dataset.del,{active:false},true)}}
+async function upd(id,ch,re){if(sb)await sb.from("products").update(ch).eq("id",id);else{Object.assign(P.find(p=>p.id==id),ch);localStorage.setItem("demoP",JSON.stringify(P))}await load();if(re)panel()}
+async function save(){const g=i=>$("#"+i).value;if(!g("pn")||!g("pp")){$("#pm").textContent="Completá nombre y precio.";return}
+let url=null;const f=$("#pf").files[0];
+if(f&&sb){const path=Date.now()+"-"+f.name.replace(/[^\w.]/g,"_");const{error}=await sb.storage.from("productos").upload(path,f);if(!error)url=sb.storage.from("productos").getPublicUrl(path).data.publicUrl}
+else if(f)url=await new Promise(r=>{const x=new FileReader;x.onload=()=>r(x.result);x.readAsDataURL(f)});
+const row={name:g("pn"),category:g("pc"),price:+g("pp"),old_price:g("po")?+g("po"):null,unit:g("pu"),discount_pct:+g("pd")||0,promo:g("pr")||null,liters:+g("pl")||null,grams:+g("pg")||null,description:g("pds")||null,is_offer:$("#pof").checked,is_promo:$("#ppr").checked,image_url:url,active:true,sold_count:0};
+if(editId){const{sold_count,active,...ch}=row;if(!url)delete ch.image_url;await upd(editId,ch,true);return}
+if(sb){const{error}=await sb.from("products").insert(row);if(error){$("#pm").textContent=error.message;return}}else{row.id=Date.now();row.emoji="🛒";P.push(row);localStorage.setItem("demoP",JSON.stringify(P))}
+await load();panel()}
+sv();load();
+const hh=()=>{if(location.hash=="#admin")adminOpen()};addEventListener("hashchange",hh);hh();
+</script></body></html>
