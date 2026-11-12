@@ -39,6 +39,7 @@ main{max-width:1100px;margin:auto;padding:0 16px 40px}
 .cat{text-decoration:none}[id^="c-"]{scroll-margin-top:72px}html{scroll-behavior:smooth}
 @media(max-width:640px){.cats{grid-template-columns:repeat(3,1fr);gap:10px}.cat{font-size:13px}}
 .top{display:flex;justify-content:space-between;align-items:baseline}.top a{font:600 14px system-ui;color:var(--ink);cursor:pointer}
+.tcx{font:14px/1.5 system-ui,sans-serif;color:var(--ink)}.tcx h4{margin:16px 0 4px;font-size:15px}.tcx p{margin:0 0 6px}
 .credit{background:#fff;color:#3a3a3a;text-align:center;font:13px/1.4 system-ui,sans-serif;padding:14px 16px}
 footer{background:var(--red2);color:#fff;padding:28px 16px}footer .in{max-width:1100px;margin:auto}
 footer iframe{width:100%;height:260px;border:0;border-radius:12px;margin-top:12px}footer a{color:#fff}
@@ -62,13 +63,25 @@ body{overflow-x:hidden}@media(max-width:640px){header{padding:8px 12px;gap:8px}h
 <footer id="ubicacion"><div class="in"><h3>Dónde estamos</h3><p>📍 Calle 3 de Febrero 2878, Caseros, Provincia de Buenos Aires.</p>
 <a href="https://www.google.com/maps/search/?api=1&query=3%20de%20Febrero%202878%2C%20Caseros%2C%20Buenos%20Aires%2C%20Argentina" target="_blank">Abrir en Google Maps</a> · <a href="https://www.instagram.com/fiambreriaelmatambre" target="_blank">@fiambreriaelmatambre</a>
 <iframe title="Mapa" loading="lazy" src="https://maps.google.com/maps?q=3%20de%20Febrero%202878%2C%20Caseros%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
-<p>© 2026 El Matambre · Que te mata el hambre</p></div></footer>
+<p>© 2026 El Matambre · Que te mata el hambre</p><p><a href="#" data-tc>Términos y condiciones y política de privacidad</a></p></div></footer>
 <div class="credit">App desarrollada por Vidriera Digital Buenos Aires Argentina todos los derechos reservados 2026</div>
 
-<div class="ov" id="co"><div class="pn"><div class="top"><h3>🛒 Tu pedido</h3><button class="btn o" data-x>Cerrar</button></div><div id="cl"></div><h3 id="ct"></h3><div class="f"><input id="cn" placeholder="Nombre y apellido de quien retira" autocomplete="name"><small id="cm" style="color:#c0291b"></small></div><button class="btn p" id="send" style="width:100%;padding:12px">Enviar pedido por WhatsApp</button></div></div>
+<div class="ov" id="co"><div class="pn"><div class="top"><h3>🛒 Tu pedido</h3><button class="btn o" data-x>Cerrar</button></div><div id="cl"></div><h3 id="ct"></h3><div class="f"><input id="cn" placeholder="Nombre y apellido de quien retira" autocomplete="name"><label class="sans" style="font-size:13px;display:flex;gap:8px;align-items:flex-start"><input type="checkbox" id="cok" style="margin-top:3px"><span>Soy mayor de 18 años y acepto los <a href="#" data-tc style="color:var(--red)">términos y condiciones</a> y la política de privacidad.</span></label><small id="cm" style="color:#c0291b"></small></div><button class="btn p" id="send" style="width:100%;padding:12px">Enviar pedido por WhatsApp</button></div></div>
 <div class="ov" id="wm"><div class="pn md"><div class="warn" style="text-align:left"><b>⚠️ Atención: no hacemos entregas a domicilio.</b><br>Los pedidos se retiran en el local (Calle 3 de Febrero 2878, Caseros, Provincia de Buenos Aires). ¿Querés continuar con tu pedido?</div><button class="btn p" id="ok">Sí, continuar</button><button class="btn o" data-x>Volver</button></div></div>
 <div class="ov" id="ty"><div class="pn md" id="tp"></div></div>
 <div class="ov" id="dv"><div class="pn" id="dvp"></div></div>
+<div class="ov" id="tc"><div class="pn"><div class="top"><h3>Términos y condiciones y política de privacidad</h3><button class="btn o" data-x>Cerrar</button></div><div class="tcx">
+<p>Última actualización: noviembre de 2026.</p>
+<h4>1. Quiénes somos</h4><p>Esta página pertenece a la fiambrería El Matambre, Calle 3 de Febrero 2878, Caseros, Provincia de Buenos Aires, Argentina. Contacto: WhatsApp +54 9 11 6668-2589.</p>
+<h4>2. Uso exclusivo para mayores de 18 años</h4><p>El uso de esta página y la realización de pedidos están destinados únicamente a personas mayores de 18 años. Al enviar un pedido, usted declara ser mayor de edad. La venta de bebidas alcohólicas a menores de 18 años está prohibida por la ley argentina (Ley 24.788): el local podrá solicitar un documento de identidad al retirar el pedido y negar la entrega si no se acredita la edad.</p>
+<h4>3. Cómo funcionan los pedidos</h4><p>Esta página no cobra pagos online: usted arma su pedido y lo envía por WhatsApp al local. El pedido es válido cuando el local recibe su mensaje; si no lo envía, no será preparado.</p><p>No realizamos entregas a domicilio: los pedidos se retiran en el local, presentando el número de pedido y el nombre indicado.</p><p>La hora de retiro es estimada (30 minutos, o 45 si el pedido incluye fiambres o quesos) y se calcula con la hora de su dispositivo.</p><p>En productos por peso el total mostrado es aproximado y el importe final se determina al pesar. Los precios, promociones y el stock pueden cambiar sin aviso y están sujetos a disponibilidad. El local podrá modificar o cancelar un pedido por falta de stock o error evidente de precio, avisando por WhatsApp. Las imágenes son ilustrativas.</p>
+<h4>4. Datos personales que recolectamos</h4><p>Para gestionar su pedido recolectamos el nombre y apellido de quien retira, los productos pedidos, el total, la hora de retiro y la fecha. Además, al enviar el mensaje, el local recibe su número de WhatsApp a través de esa aplicación; esta página no se lo solicita.</p>
+<h4>5. Para qué los usamos</h4><p>Usamos sus datos únicamente para preparar, identificar y entregar su pedido y comunicarnos con usted sobre él. No los vendemos ni los cedemos a terceros con fines publicitarios, salvo obligación legal.</p>
+<h4>6. Dónde se guardan y terceros</h4><p>Los pedidos se guardan en servidores del proveedor Supabase. El sitio se aloja en GitHub Pages, muestra mapas de Google y el envío del pedido se realiza mediante WhatsApp (Meta); cada uno se rige por sus propias políticas. En su dispositivo se guardan localmente el carrito y las imágenes ya vistas, para que la página cargue más rápido. No usamos cookies propias de publicidad ni de seguimiento; el mapa de Google puede utilizar las suyas.</p>
+<h4>7. Conservación</h4><p>Conservamos los datos el tiempo necesario para gestionar los pedidos, cumplir obligaciones legales y resolver reclamos.</p>
+<h4>8. Sus derechos</h4><p>Conforme a la Ley 25.326 de Protección de Datos Personales, usted puede solicitar el acceso, la rectificación, la actualización o la supresión de sus datos escribiendo al WhatsApp del local.</p><p>La Agencia de Acceso a la Información Pública, en su carácter de Órgano de Control de la Ley 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.</p>
+<h4>9. Cambios y ley aplicable</h4><p>Podemos actualizar estos términos y se publicarán en esta página. Se rigen por las leyes de la República Argentina, incluida la Ley 24.240 de Defensa del Consumidor.</p>
+</div></div></div>
 <div class="ov" id="ad"><div class="pn" id="ap"></div></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
@@ -102,7 +115,7 @@ function openP(id){dp=P.find(x=>x.id==id);if(!dp)return;dq=mn(dp);drawP();$("#dv
 function drawP(){const p=dp,b=badge(p);$("#dvp").innerHTML=`<button class="btn o" data-x>← Volver</button><div class="im big" ${p.image_url?`style="background-image:url('${esc(p.image_url)}')"`:""}>${p.image_url?"":esc(p.emoji||"🛒")}</div><h2 style="margin:8px 0">${esc(p.name)}</h2>${b?`<span class="badge st" style="background:#e3001b;color:#fff">OFERTA</span>`:""}${b?`<span class="badge st">${b}</span>`:""}${p.promo?`<span class="badge st vi">LLEVANDO 2</span>`:""}<div class="price" style="font-size:26px;margin-top:6px">${money(p.price)}${p.old_price?`<span class="old">${money(p.old_price)}</span>`:""}</div><div class="u">${UN[p.unit][0]}${p.horma?" · venta por horma: mínimo 4 kg":""}</div><div class="u">Precio sin impuestos nacionales ${net(p)}${p.unit=="un"?"":" "+UN[p.unit][0]}</div>${p.liters>0?`<div class="u">Precio por 1 litro: $${(base(p)/p.liters).toLocaleString("es-AR",{minimumFractionDigits:2,maximumFractionDigits:2})}</div>`:""}${p.grams>0?`<div class="u">Precio por 1 kilo: $${(base(p)/(p.grams/1000)).toLocaleString("es-AR",{minimumFractionDigits:2,maximumFractionDigits:2})}</div>`:""}${p.description?`<h3>Descripción</h3><p class="sans" style="color:var(--mut);white-space:pre-line">${esc(p.description)}</p>`:""}<div class="bar"><div><small>Tu producto</small><br><b class="price" style="font-size:20px">${money(line(p,dq))}</b></div><span class="q"><button data-dm>−</button>${fq(p,dq)}<button data-dpl>+</button></span><button class="btn p" data-dadd>Agregar</button></div>`}
 /* carrito */
 const sv=()=>{localStorage.setItem("cart",JSON.stringify(cart));const n=Object.keys(cart).length;$("#cc").textContent=n;$("#cc").style.display=n?"block":"none"};
-const rd=x=>+x.toFixed(3),step=p=>p.unit=="kg"&&p.category=="Fiambres y Embutidos"?0.1:UN[p.unit][1];
+const rd=x=>+x.toFixed(3),step=p=>p.unit=="kg"&&["Fiambres y Embutidos","Quesos"].includes(p.category)?0.1:UN[p.unit][1];
 const mn=p=>p.horma?(p.unit=="kg"?4:p.unit=="100g"?4000:step(p)):step(p); // mínimo: horma = 4 kg; fiambres = 100 g
 const fq=(p,q)=>{const u=UN[p.unit][2];return u=="un"?q+" un":u=="g"?q+" g":q<1?Math.round(q*1000)+" g":q+" kg"};
 const dos=p=>/^2da/.test(p.promo)&&p.unit=="un",pc=p=>+p.promo.slice(3);
@@ -116,9 +129,9 @@ if(d.a){const p=P.find(x=>x.id==d.a);cart[d.a]=cart[d.a]?rd(cart[d.a]+step(p)):m
 if(d.p){cart[d.p]=rd(cart[d.p]+step(P.find(x=>x.id==d.p)));drawCart()}
 if(d.m){const pp=P.find(x=>x.id==d.m);cart[d.m]=rd(cart[d.m]-step(pp));if(cart[d.m]<mn(pp))delete cart[d.m];drawCart()}
 if(t.closest("#cb")){drawCart();$("#co").classList.add("on")}
-if(t.id=="send"&&Object.keys(cart).length){if(!/\S+\s+\S+/.test($("#cn").value.trim())){$("#cm").textContent="Escribí nombre y apellido de quien retira.";$("#cn").focus()}else{$("#cm").textContent="";$("#wm").classList.add("on")}}
+if(t.id=="send"&&Object.keys(cart).length){if(!/\S+\s+\S+/.test($("#cn").value.trim())){$("#cm").textContent="Escribí nombre y apellido de quien retira.";$("#cn").focus()}else if(!$("#cok").checked){$("#cm").textContent="Para continuar, confirmá que sos mayor de 18 años y que aceptás los términos y condiciones."}else{$("#cm").textContent="";$("#wm").classList.add("on")}}
 if("x" in d){t.closest(".ov").classList.remove("on");if(t.closest("#ad"))history.replaceState(null,"",location.pathname+location.search)}
-if(t.id=="ok")finish();if("sent" in d)sent();
+if(t.id=="ok")finish();if("sent" in d)sent();if("tc" in d){e.preventDefault();$("#tc").classList.add("on")}
 if(t.classList.contains("ov")&&t.id!="ty")t.classList.remove("on")});
 $("#q").oninput=e=>{term=e.target.value.trim().toLowerCase();render()};
 async function finish(){const l=drawCart(),name=$("#cn").value.trim().replace(/\s+/g," "),w=window.open("","_blank");let t=0;l.forEach(([p,q])=>t+=line(p,q));
